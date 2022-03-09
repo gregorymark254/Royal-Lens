@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--suppress CheckImageSize -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/jquery-3.6.0.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <style>
+        * {box-sizing: border-box;}
+
+        .container {
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            width: 90%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md sticky-top ">
+    <a class="navbar-brand" href="#"><b>Royal Lens</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Book.html">Book Online</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<hr style="background-color: black">
+
+<div class="container-fluid">
+    <div style="text-align: center;font-family: initial;">
+        <h1><b><u>Featured Work</u></b></h1>
+    </div>
+    <br>
+    <div class="row" >
+        <div class="container">
+            <img src="images/person.jpg" alt=""  class="image">
+            <div class="overlay">Personal Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/person1.jpg" alt=""  class="image">
+            <div class="overlay">Personal Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/person2.jpg" alt=""  class="image">
+            <div class="overlay">Personal Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/person3.jpg" alt=""  class="image">
+            <div class="overlay">Personal Shoots</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="container">
+            <img src="images/baby.jpg" alt=""  class="image">
+            <div class="overlay">Baby Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/baby1.jpg" alt=""  class="image">
+            <div class="overlay">Baby Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/pot.jpg" alt=""  class="image">
+            <div class="overlay">Portrait Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/pot1.jpg" alt=""  class="image">
+            <div class="overlay">Personal Shoots</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="container">
+            <img src="images/shower.jpg" alt=""  class="image">
+            <div class="overlay">Baby Shower Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/shower1.jpg" alt=""  class="image">
+            <div class="overlay">Baby Shower Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/birth.jpg" alt=""  class="image">
+            <div class="overlay">Birthday Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/birth1.jpg" alt=""  class="image">
+            <div class="overlay">Birthday Shoots</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="container">
+            <img src="images/couple.jpg" alt=""  class="image">
+            <div class="overlay">Couples Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/couple1.jpg" alt=""  class="image">
+            <div class="overlay">Couples Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/grad.jpg" alt=""  class="image">
+            <div class="overlay">Graduation Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/grad1.jpg" alt=""  class="image">
+            <div class="overlay">Graduation Shoots</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="container">
+            <img src="images/wed.jpg" alt=""  class="image">
+            <div class="overlay">Wedding Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/wed1.jpg" alt=""  class="image">
+            <div class="overlay">Wedding Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/wed2.jpg" alt=""  class="image">
+            <div class="overlay">Wedding Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/wed3.jpg" alt=""  class="image">
+            <div class="overlay">Wedding Shoots</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="container">
+            <img src="images/com.jpg" alt=""  class="image">
+            <div class="overlay">Commercial Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/comer1.jpg" alt=""  class="image">
+            <div class="overlay">Commercial Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/commer2.jpg" alt=""  class="image">
+            <div class="overlay">Commercial Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/commer3.jpg" alt=""  class="image">
+            <div class="overlay">Commercial Shoots</div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="container">
+            <img src="images/street.jpg" alt=""  class="image">
+            <div class="overlay">Street Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/street1.jpg" alt=""  class="image">
+            <div class="overlay">Street Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/street2.jpg" alt=""  class="image">
+            <div class="overlay">Street Shoots</div>
+        </div>
+        <div class="container">
+            <img src="images/street3.jpg" alt=""  class="image">
+            <div class="overlay">Street Shoots</div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                &copy; 2022 By Royal Lens Photography. | All Rights Reserved .
+            </div>
+            <div class="col-sm-4">
+                <img src="images/fb.png" alt="fb" width="30" height="30"><a href="https://www.facebook.com/profile.php?id=100008989771011"> Royal lens Ke</a> &nbsp;
+                <img src="images/ig.png" alt="ig" width="30" height="30"><a href="https://instagram.com/_royal.lens.ke?utm_media=copy_link">  _Royal.lens.ke</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

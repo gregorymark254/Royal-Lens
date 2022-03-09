@@ -1,0 +1,56 @@
+.navbar{
+    background-color: white;
+}
+
+.nav-link{
+    color: black;
+    font-family: cursive;
+    align-items: center;
+    margin: 6px 10px;
+}
+.nav-link:hover{
+    border: 2px solid black;
+    color: black;
+}
+
+.navbar-brand{
+    color: black;
+    font-family: initial;
+}
+.navbar-toggler-icon{
+    border: 2px solid orange;
+    border-radius: 10px;
+    color: black;
+}
+.img{
+    opacity: 0.8;
+}
+.c{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact{
+    background-color: white;
+    color: black;
+    padding: 16px 18px;
+    text-align: center;
+}
+label{
+    text-align: left;
+}
+
+
+.footer{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-family: initial;
+}
+

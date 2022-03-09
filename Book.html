@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--suppress CheckImageSize -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <script src="bootstrap/js/jquery-3.6.0.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f1f1f1;
+    }
+
+    #regForm {
+      background-color: #ffffff;
+      margin: 50px auto;
+      font-family: cursive;
+      padding: 40px;
+      width: 70%;
+      min-width: 300px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 17px;
+      font-family: cursive;
+      border: 1px solid #aaaaaa;
+    }
+
+    /* Mark input textarea and select boxes that gets an error on validation: */
+    input.invalid{
+      background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+
+    button {
+      background-color: #04AA6D;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-family: cursive;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #prevBtn {
+      background-color: #bbbbbb;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    /* Mark the steps that are finished and valid: */
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md sticky-top ">
+  <a class="navbar-brand" href="#"><b>Royal Lens</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Portfolio.html">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Pricing.html">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Book.html">Book Online</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<hr style="background-color: black">
+<div class="container" style="text-align: center">
+  <h3>- Book Online -</h3>
+  <p>_________</p>
+</div>
+
+<div class="container">
+  <h5><i>Check out our availability and book the date and time that works for you.</i></h5>
+  <h6>Select a Date and Time.</h6>
+  <hr>
+  <form action="" id="regForm" method="post">
+    <div class="tab">
+      <label>Date :
+        <input type="date" class="form-control" required style="border: 2px solid black">
+      </label>
+      <label>Time :
+        <input type="time" class="form-control" required style="border: 2px solid black">
+      </label>
+      <h6>Days available: Sunday - Friday</h6>
+    </div>
+    <div class="tab">
+      <h5><u><i>Enter Your Details</i></u></h5>
+      <label>Names :
+        <input type="text" placeholder=" Enter your Names.." class="form-control"
+               style="border: 2px solid black" required>
+      </label>
+      <label>Phone Number :
+        <input type="text" placeholder=" Phone Number" class="form-control"
+               style="border: 2px solid black" required>
+      </label><br>
+      <label>Email :
+        <input type="email" placeholder=" Email Address" class="form-control"
+               style="border: 2px solid black" required>
+      </label>
+      <label>Location :
+        <input type="text" placeholder=" Your Location" class="form-control"
+               style="border: 2px solid black" required>
+      </label><br>
+      <label>I would like photos of * <br>
+        <select type="search" class="form-control" required
+                style="border: 2px solid black;width: 250%">
+          <option value="">Choose Option</option>
+          <option value="">Personal Shoot</option>
+          <option value="">Street Shoot</option>
+          <option value="">Wedding Shoot</option>
+          <option value="">Birthday Shoot</option>
+          <option value="">Baby Showers</option>
+          <option value="">Graduation Shoot</option>
+          <option value="">Couple Shoot</option>
+          <option value="">Studio Shoot</option>
+          <option value="">co-operate Event</option>
+          <option value="">Commercial Photography</option>
+        </select>
+      </label><br>
+      <label>What Did you Have In Mind? * <br>
+        <textarea name="text" id="txt" cols="51" rows="5" class="form-control" required
+                  placeholder="Any specifications?"  style="border: 2px solid black"></textarea>
+      </label>
+      <br>
+      <button type="submit" class="btn btn-success">Finish</button>
+    </div>
+    <br>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
+</div>
+
+<br>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        &copy; 2022 By Royal Lens Photography. | All Rights Reserved .
+      </div>
+      <div class="col-sm-4">
+        <img src="images/fb.png" alt="fb" width="30" height="30"><a href="https://www.facebook.com/profile.php?id=100008989771011"> Royal lens Ke</a> &nbsp;
+        <img src="images/ig.png" alt="ig" width="30" height="30"><a href="https://instagram.com/_royal.lens.ke?utm_media=copy_link">  _Royal.lens.ke</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentTab = 0; // Current tab is set to be the first tab (0)
+  showTab(currentTab); // Display the current tab
+
+  function showTab(n) {
+    // This function will display the specified tab of the form...
+    let x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+    //... and fix the Previous/Next buttons:
+    if (n === 0) {
+      document.getElementById("prevBtn").style.display = "none";
+    } else {
+      document.getElementById("prevBtn").style.display = "inline";
+    }
+    if (n === (x.length - 1)) {
+      document.getElementById("nextBtn").innerHTML = "Submit";
+    } else {
+      document.getElementById("nextBtn").innerHTML = "Next";
+    }
+    //... and run a function that will display the correct step indicator:
+    fixStepIndicator(n)
+  }
+
+  function nextPrev(n) {
+    // This function will figure out which tab to display
+    let x = document.getElementsByClassName("tab");
+    // Exit the function if any field in the current tab is invalid:
+    if (n === 1 && !validateForm()) return false;
+    // Hide the current tab:
+    x[currentTab].style.display = "none";
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form...
+    if (currentTab >= x.length) {
+      // ... the form gets submitted:
+      document.getElementById("regForm").submit();
+      return false;
+    }
+    // Otherwise, display the correct tab:
+    showTab(currentTab);
+  }
+
+  function validateForm() {
+    // This function deals with validation of the form fields
+    let x, y, i, valid = true;
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+    // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+      // If a field is empty...
+      if (y[i].value === "") {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+        // and set the current valid status to false
+        valid = false;
+      }
+    }
+    // If the valid status is true, mark the step as finished and valid:
+    if (valid) {
+      document.getElementsByClassName("step")[currentTab].className += " finish";
+    }
+    return valid; // return the valid status
+  }
+
+  function fixStepIndicator(n) {
+    // This function removes the "active" class of all steps...
+    let i, x = document.getElementsByClassName("step");
+    for (i = 0; i < x.length; i++) {
+      x[i].className = x[i].className.replace(" active", "");
+    }
+    //... and adds the "active" class on the current step:
+    x[n].className += " active";
+  }
+</script>
+
+
+</body>
+</html>
